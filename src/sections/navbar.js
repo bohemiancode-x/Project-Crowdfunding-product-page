@@ -26,6 +26,11 @@ const Navbar = () => {
         <div className="navbar">
             <div className='navtop'>
                 <div className="logo"><img src={logo} alt="" /></div>
+                <ul className="navinfo">
+                    <li>About</li>
+                    <li>Discover</li>
+                    <li>Get started</li>
+                </ul>
                 <div onClick={openNav} className="hamburger"><img src={hamburger} alt="" /></div>
             </div>
             <div className="navmenu">

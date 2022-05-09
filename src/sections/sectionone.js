@@ -22,9 +22,11 @@ const [openModal, setOpenModal] = useState(false);
                 <div className="buttons">
                     <button  onClick={() => setOpenModal(true)}>Back this project</button>
                     <span className="bookmark"><img src={iconbookmark} alt="" /></span>
+                    <button className="bookmarkdesktop"><span><img src={iconbookmark} alt="" /></span>Bookmark</button>
                 </div>
             </div>
             <div className="stats">
+                <div className="desktopflex">
                 <div>
                     <h1>$89,914</h1>
                     <p>of $100,000 backed</p>
@@ -39,6 +41,8 @@ const [openModal, setOpenModal] = useState(false);
                     <h1>56</h1>
                     <p>days left</p>
                 </div>
+                </div>
+                
                 <span className="progress"><div className="length"></div></span>
             </div>
         </div>

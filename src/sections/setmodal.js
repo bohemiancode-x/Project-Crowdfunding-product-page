@@ -1,13 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Modal from './modal'
 import closemodal from './iconclosemodal.svg';
+import SuccessModal from './successmodal';
 
 const SetModal = ({openModal, setOpenModal}) => {
 
-    const button = document.querySelectorAll('.radio');
-    const enterpledge = document.querySelectorAll('.enterpledge');
-  
-
+    const [modalVisible, setModalVisible] = useState(false);
 
     return (
         <div>
@@ -22,7 +20,7 @@ const SetModal = ({openModal, setOpenModal}) => {
                     Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
                     </p>
 
-                    <form action="">
+                    
                     <div className="noreward">
                     
                         <div className="input">
@@ -53,7 +51,7 @@ const SetModal = ({openModal, setOpenModal}) => {
                             <p>Enter your pledge</p>
                             <div className="buttons">
                                 <input type="number" placeholder='$25' />
-                                <button>Continue</button>
+                                <button onClick={() => {setModalVisible(true)}}>Continue</button>
                             </div>
                         </div>
                      </div>
@@ -95,12 +93,16 @@ const SetModal = ({openModal, setOpenModal}) => {
                     </p>
                     <h1>0 <span>left</span></h1>
                 </div>
-                    </form>
+                    
 
                  
                 </div>
              </div>
             </Modal>
+            <SuccessModal
+                 modalVisible={modalVisible}
+                setModalVisible={setModalVisible}/>
+            
         </div>
      );
 }

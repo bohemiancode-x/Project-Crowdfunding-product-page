@@ -24,6 +24,7 @@ const OVERLAY_STYLE = {
 };
 const Modal = ({ open, children }) => {
   if (!open) return null;
+  
   return (
     <>
       <div style={OVERLAY_STYLE}>
